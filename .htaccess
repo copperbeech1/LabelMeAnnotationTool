@@ -30,3 +30,8 @@ RewriteRule ^.*$ - "[T=text/html,L]"
 
 RewriteEngine on
 RewriteRule ^index\.html$ index.php 
+
+AuthType Basic
+AuthName "Restricted Content"
+AuthUserFile /etc/apache2/.htpasswd
+Require valid-user
